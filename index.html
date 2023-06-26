@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="username" id="username">
+
+    <input type="text" name="username" id="age">
+    <button id="save">LOGIN</button>
+    <button id="remove">remove</button>
+    <a href="https://www.facebook.com/">facebook</a>
+
+
+
+
+    <script>
+        // let username = "John";
+        // localStorage.setItem("username", username);
+        // sessionStorage.setItem("username", username);
+
+        let username = document.getElementById("username")
+        let age = document.getElementById("age")
+        let save = document.getElementById("save");
+        let remove = document.getElementById("remove");
+
+        save.addEventListener("click", function () {
+
+            localStorage.setItem("username", username.value);
+            localStorage.setItem("age", age.value);
+        });
+        ;
+        const name = document.createElement("h1");
+        const sotrageName = localStorage.getItem("username");
+
+
+        name.innerHTML = localStorage.getItem("username");
+        document.body.appendChild(name);
+
+        remove.addEventListener("click", function () {
+            localStorage.removeItem("username");
+            localStorage.removeItem("age");
+        });
+
+
+        document.cookie = "username=John Doe; expires=Thu, 18 Dec 2024 12:00:00 UTC";
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
